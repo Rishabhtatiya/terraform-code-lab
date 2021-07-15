@@ -42,7 +42,7 @@ resource "aws_route" "public_route" {
 }
 resource "aws_security_group" "app_SG" {
   name        = "app_SG"
-  description = "Allow Web inbound traffic"
+  description = "Allow Web traffic"
   vpc_id      = aws_vpc.my_vpc.id
   ingress  {
     cidr_blocks = ["0.0.0.0/0"]
